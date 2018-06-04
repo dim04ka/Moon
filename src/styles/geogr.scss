@@ -1,0 +1,121 @@
+.geogr {
+    text-align: center;
+    &__title {
+        color: #282829;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 38px;
+        padding-top: 40px;
+        position: relative;
+        margin-bottom: 20px;
+        font-weight: bold;
+        &::after {
+            content: "";
+            width: 70px;
+            height: 6px;
+            background-color: $blues;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        &::before {
+            content: "";
+            width: 40px;
+            height: 6px;
+            background-color: $blues;
+            display: block;
+            margin: -10px auto;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+        }
+    }
+    &__disc {
+        color: #282829;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 14px;
+
+    }
+    &__map {
+        margin-bottom: -60px;
+        img {
+            width: 100%;
+        }
+    }
+    &__carusel {
+        position: relative;
+        width: 700px;
+        padding: 10px 40px;
+        margin: 0 auto;
+        .arrow {
+            position: absolute;
+            top: 60px;
+            padding: 0;
+            background: #ddd;
+            border-radius: 15px;
+            border: 1px solid gray;
+            font-size: 24px;
+            line-height: 24px;
+            color: #444;
+            display: block;
+            border: none;
+          }
+          .prev {
+            background: url('../img/geogr/prev.png') no-repeat;
+            width: 33px;
+            height: 33px; 
+            left: 7px;
+          }
+          .next {
+            background: url('../img/geogr/next.png') no-repeat;
+            width: 33px;
+            height: 33px; 
+            right: -88px;
+          }
+          .arrow:focus {
+            outline: none;
+          }
+          .arrow:hover {
+            cursor: pointer;
+          }
+    }
+    &__galery {
+        width: 785px;
+        overflow: hidden;
+    }
+    &__ul {
+        height: 130px;
+        width: 9999px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        transition: margin-left 250ms;
+        font-size: 0;
+        li {
+            float:left;
+            img {
+                height: 112px;
+                display: block;
+            }
+        }
+    }
+}
+@media (max-width: 1170px) {
+    .geogr__carusel {
+        width: 80%;
+    }
+    .geogr__galery {
+        width: 100%;
+    }
+    .geogr__carusel .prev {
+        left: 0;
+    }
+    .geogr__carusel .next {
+        right: 0;
+    }
+}
+@media (max-width: 425px) {
+    .geogr__carusel {
+        width: 30%;
+    }
+} 

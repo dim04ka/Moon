@@ -1,0 +1,130 @@
+.preim {
+    background-color: #292929;
+    position: relative;
+    &__caption {
+    color: $whites;
+    font-family: 'Proxima_Nova_Semibold', sans-serif;
+    font-size: 30px;
+    width: 488px;
+    margin-left: 170px;
+    padding-bottom: 50px;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 70px;
+    }
+    &__item {
+        width: 20%;
+        text-align: left;
+        padding: 0 30px;
+    }
+    &__title {
+        color:$whites;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 18px;
+        padding: 15px 0 20px;
+    }
+    &__disc {
+        color:  #e8e7e7;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 15px;
+        width: 170px;
+    }
+    &__icon {
+        width: 68px;
+        height: 68px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        position: relative;
+        z-index: 3;
+        img {
+            border-radius: 50%;
+            background-color: $blues;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &-block {
+            background: #292929;
+            width: 101px;
+            position: relative;
+            z-index: 2;
+            margin-left: -38px;
+            padding-left: 35px;
+
+        }
+    }
+    &__lines {
+        position: absolute;
+        top: 144px;
+        width: 90%;
+        z-index: 1;
+    }
+    &__line{
+        @include line;
+        margin: 0;
+      }
+    &__line:after{
+        @include lineAfter; 
+      }
+}
+@media (max-width: 1169px) {
+    .preim__lines {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .preim__icon-block {
+        width: 90px;;
+        margin-left: -30px;
+        padding-left: 26px;
+    }
+    .preim__line {
+        width: 93%;
+    }
+    .preim__caption {
+        width: auto;
+        padding-bottom: 50px;
+        text-align: center;
+        font-size: 28px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 600px) {
+    .preim__line {
+        display: none;
+    }
+
+    .preim__items {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .preim__item {
+        text-align: center;
+        width: auto;
+        border-bottom: 3px dashed #27a4ff;
+        padding-bottom: 30px;
+        margin-top: 30px;
+    }
+    .preim__icon-block {
+        margin: 0 auto;
+    }
+    .preim__disc {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .preim__caption {
+        padding-bottom: 10px;
+    }
+    
+    
+
+}

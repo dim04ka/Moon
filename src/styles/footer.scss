@@ -1,0 +1,88 @@
+.footer__phone:hover {
+    transform: rotate(180deg);
+    transition: all 1s ease-in;
+
+}
+
+.footer {
+    background-color: #282829;
+    padding: 20px;
+    &__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        z-index: 2;
+    }
+    &__block-wid{
+        width: 300px;
+    }
+    &__caption {
+        color: $blues;
+        font-family: 'Proxima_Nova_Semibold', sans-serif;
+        font-size: 16px;
+        padding: 10px 5px;
+        font-weight: bold;
+    }
+    .fa {
+        color: $blues;
+    }
+    span {
+        color: #ebebeb;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 16px;
+    }
+    @mixin infoli {
+        color: #ebebeb;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+    li {
+        @include infoli;
+    }
+    &__link {
+        @include infoli;
+        &:hover{
+            color: #27a4ff;
+            list-style-type: disc;
+            list-style-position: inside;
+            transition: all 0.5s ease-in;
+            a {
+                margin-left: -10px;
+                transition: all 0.5s ease-in;
+            }
+        }
+        a {
+            @include infoli;
+        }
+    }
+    .contacts {
+        li.fan::before{
+            padding-right: 11px;
+            font-family: "FontAwesome";
+            color: $blues;
+        }
+        li.fan-phone::before{
+            content: "\f095";
+        }
+        li.fan-mobile::before{
+            content: "\f10b";
+            font-size: 20px;
+            padding-right: 15px;
+        }
+        li.fan-map-marker::before{
+            content: "\f041";
+        }
+        li:not(.fan) {
+            padding-left: 23px;
+        }
+
+    }
+    &__line{
+        @include line; 
+      }
+    &__line:after{
+        @include lineAfter; 
+      }
+}

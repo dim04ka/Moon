@@ -1,0 +1,75 @@
+.statistika {
+    background-image: url(../img/statistika/bg.png);
+    padding-bottom: 60px;
+    margin-top: -105px;
+    &__title{
+        color: $whites;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 38px;
+        font-weight: bold;
+        padding-top: 190px;
+        position: relative;
+        margin-bottom: 60px;
+        &::after {
+            content: "";
+            width: 70px;
+            height: 5px;
+            background-color: $blues;
+            display: block;
+            margin-top: 30px;
+        }
+        &::before {
+            content: "";
+            width: 40px;
+            height: 5px;
+            background-color: $blues;
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+        }
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    &__item {
+        padding: 1px 14px;
+
+    }
+    &__caption{
+        color: $whites;
+        font-family: "Myriad Pro";
+        font-size: 60px;
+        font-weight: bold;
+        position: relative;
+        &::after {
+            content: url(../img/statistika/stat-icon.png);
+            top: -23px;
+            position: absolute;
+        }
+    }
+    &__disc {
+        color:$whites;
+        font-family: 'Proxima_Nova', sans-serif;
+        font-size: 17px;
+        padding: 20px 0;
+        line-height: 18px;
+        width: 182px;
+    }
+}
+@media (max-width: 1170px) {
+    .statistika__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0;
+    }
+    .statistika__item{
+        width: auto;
+        padding: 10px 30px;
+    }
+}

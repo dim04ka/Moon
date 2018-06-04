@@ -1,0 +1,27 @@
+.container {
+  max-width: 1170px;
+  margin:0 auto;
+}
+.grid {
+  display: flex;
+  justify-content: space-between;
+  &.column {
+    flex-direction: column;
+  }
+  &.row {
+    flex-direction: row; 
+  }
+  &__item-6 {
+    width: 50%; 
+  }
+  &__item-4 {
+    width: 25%; 
+  }
+}
+@media (max-width:1170px) {
+  .container {
+    width: 95%;
+  }
+}
+  
+

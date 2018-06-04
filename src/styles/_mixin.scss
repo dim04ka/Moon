@@ -1,0 +1,18 @@
+@mixin line {
+    width: 85%;
+    height: 0px;
+    border-bottom: 3px dashed #27a4ff;
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 20px
+}
+@mixin lineAfter {
+    content: "";
+    border-left: 10px solid #27a4ff;
+    border-right: 0px solid transparent;
+    border-top: 8px solid transparent;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    left: 100%;
+    top: -5px;
+}

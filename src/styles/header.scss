@@ -1,0 +1,275 @@
+.topLine{
+    background-color: #252525;
+    color: #757575;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    height: 40px;
+    &__contact {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px 0;
+        & .fa{
+            color: $blues;
+            padding: 0 10px;
+        }
+    }
+    &__language {
+        margin-left: auto;
+        cursor: pointer;
+        &:hover i:last-child, &:hover {
+            color: white;
+            transition: all 0.5s ease-out;
+        }
+        .topLine__icon-down {
+            color: #757575;
+            font-weight: bold;
+        }
+    }
+    &__mail {
+        margin-left: 25px;
+    }
+}
+.main {
+    background-image: url(../img/header/main_photo.png);
+    height: 797px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Proxima_Nova_Semibold', sans-serif;
+    &__navigation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 250px;
+    }
+    &__ul {
+        display: flex;
+    }
+    &__li {
+        padding: 0 15px;
+    }
+    &__a {
+        text-decoration: none;
+        color: $whites;
+        text-transform: uppercase;
+        font-size: 12px;
+        &:hover {
+            border-bottom: 2px solid $blues;
+            padding-bottom: 4px;
+            transition: all 0.5s ease-out;
+        }
+    }
+    &__phone {
+        color: $whites;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    &__span {
+        color: $blues;
+    }
+    &__button {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px 30px;
+        border-radius: 25px;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: all 0.5s ease-out;
+        }
+    }
+    &__call {
+        color: $whites;
+        font-size: 12px;
+    }
+}
+.zayavka {
+    background-color: rgba($color: #252525, $alpha: 0.3);
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 25px;
+    }  
+    &__caption {
+        color: $whites;
+        font-size: 26px;
+        padding: 30px 30px;
+    }
+    &__span {
+        font-weight: bold;
+    }
+    &__input{
+        width: 210px;
+        height: 44px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $whites;
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        border: none;
+        padding-left: 10px;
+        &-calendar::after {
+            content: "\f073";
+            font-family: "FontAwesome";
+        }
+
+        &-down::after {
+            content: "";
+            color:red;
+            display: block;
+        }
+        
+    }
+    &__input::placeholder{ 
+        color: $whites;
+        font-family: 'Lato', sans-serif; 
+    }
+    &__button {
+        border: none;
+        color: $whites;
+        font-family: 'Proxima_Nova_Semibold', sans-serif;
+        font-size: 14px;
+        box-shadow: 3px 4px 22px 5px rgba(14, 132, 212, 0.23);
+        background-image: linear-gradient(to right, #27a4ff 0%, #27a4ff 1%, #4ac3f9 100%);
+        border-radius: 25px;
+        width: 181px;
+        height: 44px;
+        cursor: pointer;
+        position: relative;
+        text-align: left;
+        padding-left: 28px;
+        &:hover {
+            background-image: linear-gradient(to right, #27a4ff 0%, #3476a7 1%, #1e779e 100%);
+        }
+        &::after {
+            content: url(../img/header/btn_img.png);
+            position: absolute;
+            top: 6px;
+            right: 7px;
+        }
+    }
+    &__hr {
+        height: 0.1px;
+        background-color: $whites;
+        opacity: 0.2;
+    }
+    &__disc {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        
+    }
+    &__item {
+        color: $whites;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        margin-top: 2px;
+        position: relative;
+        &:hover {
+            color: $blues;
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+            &::before {
+                content: url(../img/header/arrow_hover.png);
+                position: absolute;
+                top: -16px;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        .fa {
+            font-size: 40px;
+            padding-top: 20px;
+        }
+    }
+}
+.form .zayavka__input-calendar {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: 7px;
+    }
+
+}
+@media (max-width: 1169px) {
+    .zayavka__button {
+        margin: 20px auto;
+    }
+    .zayavka__item {
+        width: 33%;
+        margin: 10px 0;
+        &::before {
+            display: none;
+        }
+    }
+
+}
+@media (max-width: 1020px) {
+    .zayavka__input {
+        width: 45%;
+        margin: 10px 0;
+    }
+    .main__navigation {
+        padding-bottom: 140px;
+    }
+}
+@media (max-width: 768px) {
+    .main__navigation {
+        padding-bottom: 25px;
+    }
+}
+@media (max-width: 575px) {
+    .main__ul {
+        padding-bottom: 15px;
+    }
+    .topLine {
+        height: auto;
+    }
+    .topLine__contact {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 5px 0;
+        height: 73px;
+    }
+    .topLine__item {
+        padding: 5px 0;
+    }
+    .topLine__mail {
+        margin-left: 0;
+    }
+    .main {
+        height: auto;
+    }
+    .topLine__language {
+        margin: 0;
+    }
+}
+@media (max-width: 460px) {
+    .main__ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main__li {
+        padding: 5px 15px;
+    }
+    .zayavka__input {
+        width: 95%;
+    }
+    .zayavka__item {
+        width: 50%;
+    }
+}
+@media (max-width: 320px) {
+
+
+    .main__phone {
+        margin: 5px auto;
+    }
+    .main__button {
+        margin: 5px auto;
+    }
+}
